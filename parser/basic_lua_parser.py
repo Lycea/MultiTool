@@ -1,6 +1,7 @@
 
 
 from tokenizer.tokenizer import cTokenizer
+from content_parser.cont_parser import cContextParser
 
 class LuaParser():
     def __init__(self):
@@ -20,7 +21,8 @@ class LuaParser():
 
 
     def test(self,txt):
-        tokenizer=cTokenizer().tokenize(txt)
+        tokens=cTokenizer().tokenize(txt)
+        syntax_tree = cContextParser().parse(tokens)
 
 
 

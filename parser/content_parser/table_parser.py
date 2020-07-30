@@ -1,0 +1,9 @@
+
+"""TABLE-ROW:
+    TABLE|ASSIGNMENT
+
+"""
+
+
+"""TABLE
+  TABLE_OPEN ::= TABLE_ROW(,) ::TABLE_CLOSE """
