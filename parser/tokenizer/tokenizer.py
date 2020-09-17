@@ -41,7 +41,7 @@ class cTokenizer():
 
         self.to_prozess_text = txt
         self.__run_whole_text()
-
+        self.tokens.clean()
         self.tokens.print()
 
 

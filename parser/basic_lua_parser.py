@@ -2,6 +2,7 @@
 
 from tokenizer.tokenizer import cTokenizer
 from content_parser.cont_parser import cContextParser
+from tabelizer.cTabelizer import  cTabelizer
 
 class LuaParser():
     def __init__(self):
@@ -21,8 +22,10 @@ class LuaParser():
 
 
     def test(self,txt):
-        tokens=cTokenizer().tokenize(txt)
-        syntax_tree = cContextParser().parse(tokens)
+        tokenizer=cTokenizer().tokenize(txt)
+        context_parsed =cContextParser().parse(tokenizer)
+        cTabelizer().parse(context_parsed[0][0])
+
 
 
 
