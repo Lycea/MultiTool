@@ -1,5 +1,5 @@
 from content_parser.node import cNode
-from content_parser.assignment_parser import cAssignmentParser
+from content_parser.assign_parser import cAssignmentParser
 from content_parser.helpers import *
 
 

@@ -2,8 +2,13 @@ from tokenizer.token import cTokenList
 from content_parser.node import *
 from content_parser.helpers import *
 
+import sys
+for module in sys.modules:
+    print(module)
 
-import content_parser.assignment_parser as assigner
+import content_parser.assign_parser 
+
+
 
 
 """TABLE-ROW:
@@ -15,7 +20,7 @@ class cTableContent():
 
 
         print("start matching row")
-        result = match_first(token_list,[assigner.cAssignmentParser(),cTableParser()])
+        result = match_first(token_list,[content_parser.assign_parser.cAssignmentParser(),cTableParser()])
         #if we get a result check if there is a
         if result:
 
